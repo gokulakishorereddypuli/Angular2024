@@ -3,9 +3,19 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "exp7_adding_navigations": {
+    "exp7_adding_navigation": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/exp7_adding_navigations",
+            "outputPath": "dist/exp7_adding_navigation",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -64,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "exp7_adding_navigations:build:production"
+              "buildTarget": "exp7_adding_navigation:build:production"
             },
             "development": {
-              "buildTarget": "exp7_adding_navigations:build:development"
+              "buildTarget": "exp7_adding_navigation:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -99,6 +109,6 @@
     }
   },
   "cli": {
-    "analytics": "ac8b2d10-e10a-4c82-b088-241af518f909"
+    "analytics": "63097b80-a927-4efb-b704-67e65a11eccc"
   }
 }
